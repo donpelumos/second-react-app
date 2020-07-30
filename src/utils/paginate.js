@@ -6,3 +6,7 @@ export function paginate(items, pageSize, pageNumber) {
     .slice(startIndex, startIndex + pageSize)
     .value();
 }
+
+export function filterList(items, genre) {
+  return items.filter((item) => item.genre == genre);
+}

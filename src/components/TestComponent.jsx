@@ -3,7 +3,15 @@ import React, { Component } from "react";
 class TestComponent extends Component {
   state = {};
   render() {
-    return <h1>Hello</h1>;
+    return (
+      <React.Fragment>
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+        </ul>
+      </React.Fragment>
+    );
   }
 }
 

@@ -55,11 +55,13 @@ class TableComponent extends Component {
           <div className="col-md-9">
             <nav aria-label="Page navigation example">
               <ul className="pagination">
-                <li className="page-item">
-                  <a className="page-link" href="#">
-                    Previous
-                  </a>
-                </li>
+                {this.state.currentPage > 1 && (
+                  <li className="page-item">
+                    <a className="page-link" href="#">
+                      Previous
+                    </a>
+                  </li>
+                )}
                 {_.range(1, this.state.pageCount + 1).map((value) => (
                   <li
                     key={value}
@@ -136,7 +138,7 @@ class TableComponent extends Component {
       { title: "Movie 9", genre: "Action", quantity: 23, price: 4.6 },
       { title: "Movie 10", genre: "Comedy", quantity: 456, price: 4.6 },
       { title: "Movie 11", genre: "Action", quantity: 34, price: 4.6 },
-      { title: "Movie 12", genre: "Comedy", quantity: 45, price: 4.6 },
+      { title: "Movie 12", genre: "Thriller", quantity: 45, price: 4.6 },
       { title: "Movie 13", genre: "Action", quantity: 2, price: 4.6 },
       { title: "Movie 14", genre: "Thriller", quantity: 56, price: 4.6 },
       { title: "Movie 15", genre: "Action", quantity: 6, price: 4.6 },
